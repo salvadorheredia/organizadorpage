@@ -18,7 +18,8 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
-	public function index()
+	
+	 public function index()
 	{
 		$this->load->view('header');
 		$this->load->view('inicio');
@@ -26,23 +27,46 @@ class Welcome extends CI_Controller {
 
 	}
 
-	public function tools()
-	{
-		$this->load->view('tools');
-	}
+	// INDEX/INICIO FUNCTIONS
 
-	public function gouploaded()
+	public function gotodesing()
 	{
-		$this->load->view('uploaded');
+		$this->load->view('header');
+		$this->load->view('pagedesing');
 		$this->load->view('footer');
 	}
 
-	// public function upload_aspect_recommendation()
-	// {
-	// 	$this->load->view('');
-	// }
+	public function gotoprogramation(){
+		$this->load->view('header');
+		$this->load->view('programation');
+		$this->load->view('footer');
+	}
+
+	public function gotoauthorcontent(){
+		$this->load->view('header');
+		$this->load->view('authorcontent');
+		$this->load->view('footer');
+	}
+
+	// AUTHOR CONTENT FUNCTIONS
+
+	public function gotoyoutube(){
+		$this->load->view('header');
+		$this->load->view('youtube');
+		$this->load->view('footer');
+	}
+
+	public function gototiktok(){
+		$this->load->view('header');
+		$this->load->view('tiktok');
+		$this->load->view('footer');
+	}
 
 
-
+	public function gotorecommendation(){
+		$this->load->view('header');
+		$this->load->view('recommendation');
+		$this->load->view('footer');
+	}
 
 }
